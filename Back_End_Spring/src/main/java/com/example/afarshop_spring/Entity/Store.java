@@ -17,4 +17,13 @@ public class Store  implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="storeId")
     private Long storeId;
+    private String storeName;
+    private String storeLocation;
+    private Integer contactInfo;
+    private String storeDesc;
+    private String storeEmail;
+
+    @Enumerated(EnumType.STRING)
+    private Category category;
+
 }
