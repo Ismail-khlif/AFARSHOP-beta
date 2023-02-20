@@ -1,6 +1,5 @@
 package com.example.afarshop_spring.Entity;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -19,19 +18,20 @@ import java.util.Date;
 @Setter
 
 
+public class StoresDelivery implements Serializable {
 
-public class HomeDelivery implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="home_id")
-    private Long HomeId;
+    @Column(name="store_id")
+    private Long storeId;
     @JsonFormat(pattern="dd/MM/yy")
-    private Date deliveryDate;
-    private String address ;
-    private int postalCode;
+    private Date pickUpDate;
+    private String store ;
 
-
-    @OneToOne(mappedBy = "homeDelivery")
+    @OneToOne(mappedBy = "storesDelivery")
     @JsonIgnore
     private Delivery delivery ;
+
+
+
 }
