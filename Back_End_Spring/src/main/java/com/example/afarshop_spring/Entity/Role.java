@@ -18,4 +18,6 @@ public class Role  implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="roleId")
     private Long roleId;
+    @Column(length = 60)
+    private String name;
 }

@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @AllArgsConstructor
@@ -18,4 +19,8 @@ public class Provider  implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="providerId")
     private Long providerId;
+    private String providerName;
+    private long providerPrice;
+    private Date estimationDate;
+
 }
